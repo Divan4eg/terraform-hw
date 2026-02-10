@@ -48,7 +48,7 @@
 │ A managed resource "docker_image" "nginx" has not been declared in the root
 │ module.
 ```
-
+Ошибка указывает на то, что terraform пытается обратиться к ресурсу с типом `docker_image` но был создан ресурс с именем `docker_container`. 
 ```
 │ Error: Reference to undeclared resource
 │ 
@@ -58,8 +58,32 @@
 │ A managed resource "random_password" "random_string_FAKE" has not been
 │ declared in the root module.
 ```
+Ошибка указывает на то, что не создан ресурс с именем `random_string_FAKE`, создан с именем `random_string`. Также большая буква T в слове `result`.
 
-5. 
+5. Исправленный код:
+```
+resource "random_password" "random_string" {
+  length      = 16
+  special     = false
+  min_upper   = 1
+  min_lower   = 1
+  min_numeric = 1
+}
+
+resource "docker_image" "test_name" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.test_name.image_id
+  name  = "example_${random_password.random_string.result}"
+
+  ports {
+    internal = 80
+    external = 9090
+  }
+}
 ```
 
-```
+![.task5](https://github.com/Divan4eg/zabbix-homework/blob/main/img/img1.png)
