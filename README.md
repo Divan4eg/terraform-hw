@@ -109,4 +109,6 @@ resource "docker_container" "nginx" {
 8. Образ не удалился так как был использован аргумент `keep_locally = true`.
 
 https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/image
+
+Ссылка не открывается но помощь от ИИ + в описании на скриншоте логику видно:
 ![task6](https://github.com/Divan4eg/terraform-hw/blob/main/img/3.png)
