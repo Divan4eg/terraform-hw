@@ -13,6 +13,8 @@
 
 ### Решение 1
 
+![task0](http://github.com/Divan4eg/terraform-hw/blob/main/img/0.png)
+
 2. Личную информацию допустимо хранить в `personal.auto.tfvars`.
 
 3. ```"result": "NdwceTg7SLumgIyK"```
@@ -86,4 +88,4 @@ resource "docker_container" "nginx" {
 }
 ```
 
-![.task5](https://github.com/Divan4eg/zabbix-homework/blob/main/img/img1.png)
+![task5](http://github.com/Divan4eg/terraform-hw/blob/main/img/1.png)
