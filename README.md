@@ -13,3 +13,6 @@
 
 ### Решение 1
 
+2. Личную информацию допустимо хранить в `personal.auto.tfvars`.
+
+3. ```"result": "NdwceTg7SLumgIyK"```
