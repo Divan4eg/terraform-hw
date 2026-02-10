@@ -88,4 +88,25 @@ resource "docker_container" "nginx" {
 }
 ```
 
-![task5](http://github.com/Divan4eg/terraform-hw/blob/main/img/1.png)
+![task5](https://github.com/Divan4eg/terraform-hw/blob/main/img/1.png)
+
+6. Команда `terraform apply -auto-approve` выполняет применение изменений в инфраструктуре без запроса подтверждения у пользователя. Риски использования - необратимые изменения могут быть применены без возможности их предварительного просмотра, возможны потери данных из-за ошибок в конфигурации, которые будут применены автоматически. Можно применять в CI/CD пайплайнах.
+![task6](https://github.com/Divan4eg/terraform-hw/blob/main/img/2.png)
+
+7. 
+```
+{
+  "version": 4,
+  "terraform_version": "1.14.3",
+  "serial": 14,
+  "lineage": "ec66690d-a11d-4cce-054c-60c11d9640c2",
+  "outputs": {},
+  "resources": [],
+  "check_results": null
+}
+```
+
+8. Образ не удалился так как был использован аргумент `keep_locally = true`.
+
+https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/image
+![task6](https://github.com/Divan4eg/terraform-hw/blob/main/img/3.png)
