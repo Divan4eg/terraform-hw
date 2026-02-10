@@ -13,7 +13,7 @@
 
 ### Решение 1
 
-![task0](http://github.com/Divan4eg/terraform-hw/blob/main/img/0.png)
+![task0](https://github.com/Divan4eg/terraform-hw/blob/main/img/0.png)
 
 2. Личную информацию допустимо хранить в `personal.auto.tfvars`.
 
