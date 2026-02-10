@@ -26,6 +26,8 @@
 │ 
 │ All resource blocks must have 2 labels (type, name).
 ```
+Ошибка указывает на то, что блок resource должен принять 2 параметра - тип и имя, а в данном случае был один.
+
 ```
 │ Error: Invalid resource name
 │ 
@@ -34,4 +36,30 @@
 │ 
 │ A name must start with a letter or underscore and may contain only letters,
 │ digits, underscores, and dashes.
+```
+Ошибка указывает на то, что имя блока resource не может начинаться с цифры.
+
+```
+ Error: Reference to undeclared resource
+│ 
+│   on main.tf line 28, in resource "docker_container" "nginx":
+│   28:   image = docker_image.nginx.image_id
+│ 
+│ A managed resource "docker_image" "nginx" has not been declared in the root
+│ module.
+```
+
+```
+│ Error: Reference to undeclared resource
+│ 
+│   on main.tf line 29, in resource "docker_container" "nginx":
+│   29:   name  = "example_${random_password.random_string_FAKE.resulT}"
+│ 
+│ A managed resource "random_password" "random_string_FAKE" has not been
+│ declared in the root module.
+```
+
+5. 
+```
+
 ```
