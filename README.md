@@ -16,3 +16,22 @@
 2. Личную информацию допустимо хранить в `personal.auto.tfvars`.
 
 3. ```"result": "NdwceTg7SLumgIyK"```
+
+4. 
+```
+ Error: Missing name for resource
+│ 
+│   on main.tf line 22, in resource "docker_image":
+│   22: resource "docker_image" {
+│ 
+│ All resource blocks must have 2 labels (type, name).
+```
+```
+│ Error: Invalid resource name
+│ 
+│   on main.tf line 27, in resource "docker_container" "1nginx":
+│   27: resource "docker_container" "1nginx" {
+│ 
+│ A name must start with a letter or underscore and may contain only letters,
+│ digits, underscores, and dashes.
+```
