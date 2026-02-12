@@ -19,13 +19,49 @@
 
 ### Решение 1
 
+4. Нашел следующие ошибки
+
+```
+ Error: Error while requesting API to create instance: client-request-id = c3535a60-abe7-4a91-9703-9f89a6d47199 client-trace-id = d3bd596a-751c-452a-b8d4-590048c4cf13 rpc error: code = FailedPrecondition desc = Platform "standart-v4" not found
+│ 
+│   with yandex_compute_instance.platform,
+│   on main.tf line 15, in resource "yandex_compute_instance" "platform":
+│   15: resource "yandex_compute_instance" "platform" {
+```
+В каталоге Яндекса есть конфигурация `standard-v1`, нет `standart-v4`.
+
+```
+ Error: Error while requesting API to create instance: client-request-id = 40a71df7-6005-4d29-a567-8d943495e52e client-trace-id = bd5e8bd7-0dba-4245-9afa-07f1b5dc663c rpc error: code = InvalidArgument desc = the specified number of cores is not available on platform "standard-v1"; allowed core number: 2, 4
+│ 
+│   with yandex_compute_instance.platform,
+│   on main.tf line 15, in resource "yandex_compute_instance" "platform":
+│   15: resource "yandex_compute_instance" "platform" {
+
+```
+Нельзя установить нечетное количество ядер, поставил 2.
+
+Скриншоты с результатами:
+![task0](https://github.com/Divan4eg/terraform-hw/blob/main/img/4.png)
+![task0](https://github.com/Divan4eg/terraform-hw/blob/main/img/5.png)
+
+6. Эти параметры помогают экономить ресурсы на Я.Облаке, в частности:
+`preemptible = true` 
+Прерываемая виртуальная машина — это особый тип ВМ, который может быть остановлен в любой момент по двум причинам:  
+- Прошло более 24 часов с момента запуска
+- Возникла нехватка ресурсов для запуска новых ВМ
+
+`core_fraction=5`
+Core_fraction определяет базовую производительность ядра процессора в процентах. Нагружать ВМ не будем, поэтому экономиим ресурсы.
+
 ### Задание 2
 
-Замените все хардкод-значения для ресурсов yandex_compute_image и yandex_compute_instance на отдельные переменные. К названиям переменных ВМ добавьте в начало префикс vm_web_ . Пример: vm_web_name.
-Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их default прежними значениями из main.tf.
-Проверьте terraform plan. Изменений быть не должно.
+1. Замените все хардкод-значения для ресурсов yandex_compute_image и yandex_compute_instance на отдельные переменные. К названиям переменных ВМ добавьте в начало префикс vm_web_ . Пример: vm_web_name.
+2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их default прежними значениями из main.tf.
+3. Проверьте terraform plan. Изменений быть не должно.
 
-### Решение 1
+### Решение 2
+
+
 
 Задание 3
 Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
