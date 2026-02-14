@@ -79,12 +79,17 @@ Core_fraction определяет базовую производительно
 [VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task3/variables.tf)
 [VMS_PLATFORM](https://github.com/Divan4eg/terraform-hw/blob/main/task3/vms_platform.tf)
 
-Задание 4
-Объявите в файле outputs.tf один output , содержащий: instance_name, external_ip, fqdn для каждой из ВМ в удобном лично для вас формате.(без хардкода!!!)
-Примените изменения.
+### Задание 4
+
+1. Объявите в файле outputs.tf один output , содержащий: instance_name, external_ip, fqdn для каждой из ВМ в удобном лично для вас формате.(без хардкода!!!)
+2. Примените изменения.
 В качестве решения приложите вывод значений ip-адресов команды terraform output.
 
-### Решение 1
+### Решение 4
+
+Прикладываю скриншоты  
+![task4](https://github.com/Divan4eg/terraform-hw/blob/main/img/6.png)
+![task4](https://github.com/Divan4eg/terraform-hw/blob/main/img/7.png)
 
 Задание 5
 В файле locals.tf опишите в одном local-блоке имя каждой ВМ, используйте интерполяцию ${..} с НЕСКОЛЬКИМИ переменными по примеру из лекции.
