@@ -101,14 +101,8 @@ variable "vm_metadata" {
   default = {
     common = {
       serial-port-enable = 1
-      ssh-keys = ""
+      ssh-keys = "ubuntu:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILuXO9N9zMuO6BE4oQ6qedhwPoxUvueiSMTbkY1r5S00 pda@IdeaPad"
       additional = {}
     }
   }
-}
-
-variable "vms_ssh_root_key" {
-  type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILuXO9N9zMuO6BE4oQ6qedhwPoxUvueiSMTbkY1r5S00 pda@IdeaPad"
-  description = "ssh-keygen -t ed25519"
 }
