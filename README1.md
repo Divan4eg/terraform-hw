@@ -91,14 +91,21 @@ Core_fraction определяет базовую производительно
 ![task4](https://github.com/Divan4eg/terraform-hw/blob/main/img/6.png)
 ![task4](https://github.com/Divan4eg/terraform-hw/blob/main/img/7.png)
 
-Задание 5
-В файле locals.tf опишите в одном local-блоке имя каждой ВМ, используйте интерполяцию ${..} с НЕСКОЛЬКИМИ переменными по примеру из лекции.
-Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
-Примените изменения.
+### Задание 5
 
-### Решение 1
+1. В файле locals.tf опишите в одном local-блоке имя каждой ВМ, используйте интерполяцию ${..} с НЕСКОЛЬКИМИ переменными по примеру из лекции.
+2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
+3. Примените изменения.
 
-Задание 6
+### Решение 5
+
+Прикладываю новые файлы main и locals  
+
+[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task5/main.tf)
+[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task5/locals.tf)
+
+### Задание 6
+
 Вместо использования трёх переменных ".._cores",".._memory",".._core_fraction" в блоке resources {...}, объедините их в единую map-переменную vms_resources и внутри неё конфиги обеих ВМ в виде вложенного map(object).
 
 пример из terraform.tfvars:
