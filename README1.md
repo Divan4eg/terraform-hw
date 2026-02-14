@@ -61,10 +61,10 @@ Core_fraction определяет базовую производительно
 
 ### Решение 2
 
-Прикладываю новые файлы main, variables, vms_platform  
-[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task3/main.tf)
-[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task3/variables.tf)
-[VMS_PLATFORM](https://github.com/Divan4eg/terraform-hw/blob/main/task3/vms_platform.tf)
+Прикладываю новые файлы main и variables  
+
+[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task2/main.tf)
+[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task2/variables.tf)
 
 ### Задание 3
 
@@ -74,10 +74,10 @@ Core_fraction определяет базовую производительно
 
 ### Решение 3
 
-Прикладываю новые файлы main и variables  
-
-[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task2/main.tf)
-[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task2/variables.tf)
+Прикладываю новые файлы main, variables, vms_platform  
+[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task3/main.tf)
+[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task3/variables.tf)
+[VMS_PLATFORM](https://github.com/Divan4eg/terraform-hw/blob/main/task3/vms_platform.tf)
 
 Задание 4
 Объявите в файле outputs.tf один output , содержащий: instance_name, external_ip, fqdn для каждой из ВМ в удобном лично для вас формате.(без хардкода!!!)
