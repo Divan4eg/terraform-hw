@@ -61,16 +61,23 @@ Core_fraction определяет базовую производительно
 
 ### Решение 2
 
-Прикладываю новые файлы main и variables
+Прикладываю новые файлы main, variables, vms_platform  
+[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task3/main.tf)
+[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task3/variables.tf)
+[VMS_PLATFORM](https://github.com/Divan4eg/terraform-hw/blob/main/task3/vms_platform.tf)
+
+### Задание 3
+
+1. Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
+2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: "netology-develop-platform-db" , cores  = 2, memory = 2, core_fraction = 20. Объявите её переменные с префиксом vm_db_ в том же файле ('vms_platform.tf'). ВМ должна работать в зоне "ru-central1-b"
+3. Примените изменения.
+
+### Решение 3
+
+Прикладываю новые файлы main и variables  
+
 [MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task2/main.tf)
 [VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task2/variables.tf)
-
-Задание 3
-Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
-Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: "netology-develop-platform-db" , cores  = 2, memory = 2, core_fraction = 20. Объявите её переменные с префиксом vm_db_ в том же файле ('vms_platform.tf'). ВМ должна работать в зоне "ru-central1-b"
-Примените изменения.
-
-### Решение 1
 
 Задание 4
 Объявите в файле outputs.tf один output , содержащий: instance_name, external_ip, fqdn для каждой из ВМ в удобном лично для вас формате.(без хардкода!!!)
