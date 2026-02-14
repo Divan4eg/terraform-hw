@@ -62,8 +62,8 @@ Core_fraction определяет базовую производительно
 ### Решение 2
 
 Прикладываю новые файлы main и variables
-[Текст ссылки](https://адрес.сайта)
-[Текст ссылки](https://адрес.сайта)
+[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task2/main.tf)
+[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task2/variables.tf)
 
 Задание 3
 Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
