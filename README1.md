@@ -102,12 +102,12 @@ Core_fraction определяет базовую производительно
 Прикладываю новые файлы main и locals  
 
 [MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task5/main.tf)
-[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task5/locals.tf)
+[LOCALS](https://github.com/Divan4eg/terraform-hw/blob/main/task5/locals.tf)
 
 ### Задание 6
 
-Вместо использования трёх переменных ".._cores",".._memory",".._core_fraction" в блоке resources {...}, объедините их в единую map-переменную vms_resources и внутри неё конфиги обеих ВМ в виде вложенного map(object).
-
+1. Вместо использования трёх переменных ".._cores",".._memory",".._core_fraction" в блоке resources {...}, объедините их в единую map-переменную vms_resources и внутри неё конфиги обеих ВМ в виде вложенного map(object).
+```
 пример из terraform.tfvars:
 vms_resources = {
   web={
@@ -127,13 +127,18 @@ vms_resources = {
     ...
   }
 }
-Создайте и используйте отдельную map(object) переменную для блока metadata, она должна быть общая для всех ваших ВМ.
-
+```
+2. Создайте и используйте отдельную map(object) переменную для блока metadata, она должна быть общая для всех ваших ВМ.
+```
 пример из terraform.tfvars:
 metadata = {
   serial-port-enable = 1
   ssh-keys           = "ubuntu:ssh-ed25519 AAAAC..."
 }
-Найдите и закоментируйте все, более не используемые переменные проекта.
+```
+3. Найдите и закоментируйте все, более не используемые переменные проекта.
 
-Проверьте terraform plan. Изменений быть не должно.
+4. Проверьте terraform plan. Изменений быть не должно.
+
+### Решение 6
+
