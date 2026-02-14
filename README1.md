@@ -142,3 +142,8 @@ metadata = {
 
 ### Решение 6
 
+Прикладываю новые файлы main, variables, vms_platform  
+[MAIN](https://github.com/Divan4eg/terraform-hw/blob/main/task6/main.tf)
+[VARIABLES](https://github.com/Divan4eg/terraform-hw/blob/main/task6/variables.tf)
+[VMS_PLATFORM](https://github.com/Divan4eg/terraform-hw/blob/main/task6/vms_platform.tf)
+
