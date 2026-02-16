@@ -59,3 +59,5 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 Удалите все созданные ресурсы.
 
 ### Решение 4
+
+![task1](https://github.com/Divan4eg/terraform-hw/blob/main/img/9.png)
