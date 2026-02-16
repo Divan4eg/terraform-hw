@@ -24,7 +24,7 @@ variable "each_vm" {
 ### Решение 2
 
 Выложил в папку
-[ter-03](https://github.com/Divan4eg/terraform-hw/blob/main/task2/main.tf)
+[ter-03](https://github.com/Divan4eg/terraform-hw/tree/main/ter-03)
 
 ### Задание 3
 1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле disk_vm.tf .
